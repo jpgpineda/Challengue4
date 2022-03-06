@@ -1,6 +1,7 @@
 package com.example.challengue4.data.network
 
 import com.example.weather.Network.WeatherEntity
+import retrofit2.Response
 import retrofit2.http.GET
 import retrofit2.http.Query
 
@@ -10,5 +11,5 @@ interface WeatherAPI {
         @Query("id") lon: Long,
         @Query("units") units: String?,
         @Query("lang") lang: String?,
-        @Query("appid") appid: String?): WeatherEntity
+        @Query("appid") appid: String?): Response<WeatherEntity>
 }

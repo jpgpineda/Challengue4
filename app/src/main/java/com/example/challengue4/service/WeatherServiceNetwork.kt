@@ -7,14 +7,15 @@ import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.withContext
 import retrofit2.Response
 import retrofit2.Retrofit
+import java.lang.Error
 
 class WeatherServiceNetwork {
-    val retrofit = RetrofitInstance.getRetrofit().create(WeatherAPI::class.java)
+    private val retrofit = RetrofitInstance.getRetrofit().create(WeatherAPI::class.java)
 
-    suspend fun getWeatherById(id: Long, units: String, lang: String, appid: String): WeatherEntity{
+    suspend fun getWeatherById(id: Long, units: String, lang: String, appid: String): WeatherEntity? {
         return withContext(Dispatchers.IO) {
             val response = retrofit.getWeatherById(id, units, lang, appid)
-            response
+            response.body()
         }
     }
 }
