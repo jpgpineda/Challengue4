@@ -54,6 +54,15 @@ dependencies {
     implementation 'org.jetbrains.kotlinx:kotlinx-coroutines-core:1.6.0-native-mt'
     implementation 'androidx.lifecycle:lifecycle-runtime-ktx:2.4.1'
 
+    // AActivity
+    implementation 'androidx.activity:activity-ktx:1.4.0'
+
+    // ViewModel
+    implementation 'androidx.lifecycle:lifecycle-viewmodel-ktx:2.4.1'
+
+    // LiveData
+    implementation 'androidx.lifecycle:lifecycle-livedata-ktx:2.4.1'
+
     // Services
     implementation 'com.google.android.gms:play-services-location:19.0.1'
 
