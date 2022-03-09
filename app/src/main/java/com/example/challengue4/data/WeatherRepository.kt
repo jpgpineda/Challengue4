@@ -10,8 +10,9 @@ class WeatherRepository {
     suspend fun getWeatherById(id: Long, units: String, lang: String, appid: String): WeatherEntityDTO? {
         val response = api.getWeatherById(id, units, lang, appid)
         if (response != null) {
-            WeatherProvider.weather = response
-            return WeatherEntityDTO(response)
+            val weather = WeatherEntityDTO(response)
+            WeatherProvider.weather = weather
+            return weather
         }
         return null
     }

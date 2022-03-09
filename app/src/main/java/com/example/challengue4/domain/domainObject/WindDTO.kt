@@ -5,6 +5,9 @@ import com.example.weather.Network.Wind
 data class WindDTO(val windEntity: Wind) {
     val speed: Double
 
+    val formattedSpeed: String
+    get() = "$speed km/h"
+
     init {
         speed = windEntity.speed
     }

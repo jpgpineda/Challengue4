@@ -20,6 +20,9 @@ data class WeatherEntityDTO(val weatherEntity: WeatherEntity) {
     @RequiresApi(Build.VERSION_CODES.N)
     get() = SimpleDateFormat("dd/mm hh:mm a", Locale.ENGLISH).format(Date(weatherEntity.dt*1000))
 
+    val formattedLocation: String
+    get() = name + "," + sys.country
+
     init {
         main = MainDTO(weatherEntity.main)
         sys = SysDTO(weatherEntity.sys)

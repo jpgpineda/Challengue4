@@ -11,11 +11,11 @@ data class SysDTO(val sysEntity: Sys) {
     val sunrise: Long
     val sunset: Long
 
-    val formatSunset: String
+    val formattedSunset: String
     @RequiresApi(Build.VERSION_CODES.N)
     get() = SimpleDateFormat("hh:mm a", Locale.ENGLISH).format(Date(sunset*1000))
 
-    val formatSunrise: String
+    val formattedSunrise: String
     @RequiresApi(Build.VERSION_CODES.N)
     get() = SimpleDateFormat("hh:mm a", Locale.ENGLISH).format(Date(sunrise*1000))
 
