@@ -20,7 +20,7 @@ class WeatherActivity : AppCompatActivity() {
         binding = ActivityWeatherBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
-        weatherViewModel.onCreate(324232, "", "", "")
+        weatherViewModel.onCreate(324232, "", "", "6cd8e4cfa8706c26d9e895b454c1ad8e")
         setupObservers()
     }
 

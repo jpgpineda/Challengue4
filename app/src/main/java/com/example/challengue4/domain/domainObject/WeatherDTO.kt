@@ -1,7 +1,6 @@
 package com.example.weather.DomainObject
 
 import com.example.weather.Network.Weather
-import com.example.weather.Utils.WeatherType
 
 data class WeatherDTO(val weather: Weather) {
     val main: String
