@@ -3,10 +3,12 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="app/src/main/res/drawable/gradient_background.xml" value="0.2135" />
         <entry key="app/src/main/res/drawable/ic_baseline_menu_24.xml" value="0.2735" />
         <entry key="app/src/main/res/drawable/main_gradient.xml" value="0.2735" />
         <entry key="app/src/main/res/layout/activity_main.xml" value="0.15443840579710144" />
-        <entry key="app/src/main/res/layout/activity_weather.xml" value="0.15443840579710144" />
+        <entry key="app/src/main/res/layout/activity_settings.xml" value="0.2026431718061674" />
+        <entry key="app/src/main/res/layout/activity_weather.xml" value="0.31055260257444517" />
       </map>
     </option>
   </component>

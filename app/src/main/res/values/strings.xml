@@ -10,4 +10,13 @@
     <string name="hello_first_fragment">Hello first fragment</string>
     <string name="hello_second_fragment">Hello second fragment. Arg: %1$s</string>
     <string name="networkErrorOcurred">"Ha ocurrido un error en el servidor, por favor intentalo de nuevo"</string>
+    <string name="language">Lenguaje</string>
+    <string name="metrics_units">Unidades de medición</string>
+    <string name="configuration">Configuración</string>
+    <string name="spanish">Español</string>
+    <string name="english">Ingles</string>
+    <string name="french">Frances</string>
+    <string name="metric">Metrica</string>
+    <string name="imperial">Imperial</string>
+
 </resources>
