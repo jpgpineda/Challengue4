@@ -25,20 +25,29 @@ class WeatherActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         binding = ActivityWeatherBinding.inflate(layoutInflater)
         setContentView(binding.root)
-
-        var language: String = prefs.getStringValue(PreferencesKeys.LANGUAGE)
-        if (language.isEmpty()) {
-            language = defaultLanguage
-        }
-        val metrics: String = if (prefs.getBooleanValue(PreferencesKeys.METRIC)) imperial else metric
-        weatherViewModel.onCreate(3530597L, metrics, language, "6cd8e4cfa8706c26d9e895b454c1ad8e")
-        setupObservers()
         setupView()
     }
 
+    @RequiresApi(Build.VERSION_CODES.N)
     private fun setupView() {
         binding.settingsButton.setOnClickListener {
             startActivity(Intent(this, SettingsActivity::class.java))
+        }
+        getWeather()
+    }
+
+    @RequiresApi(Build.VERSION_CODES.N)
+    private fun getWeather() {
+        if (checkForinternet()) {
+            var language: String = prefs.getStringValue(PreferencesKeys.LANGUAGE)
+            if (language.isEmpty()) {
+                language = defaultLanguage
+            }
+            val metrics: String = if (prefs.getBooleanValue(PreferencesKeys.METRIC)) imperial else metric
+            weatherViewModel.onCreate(3530597L, metrics, language, "6cd8e4cfa8706c26d9e895b454c1ad8e")
+            setupObservers()
+        } else {
+            showMessage(this, getString(R.string.noInternetConnection))
         }
     }
 

@@ -8,7 +8,8 @@
         <entry key="app/src/main/res/drawable/main_gradient.xml" value="0.2735" />
         <entry key="app/src/main/res/layout/activity_main.xml" value="0.15443840579710144" />
         <entry key="app/src/main/res/layout/activity_settings.xml" value="0.2026431718061674" />
-        <entry key="app/src/main/res/layout/activity_weather.xml" value="0.31055260257444517" />
+        <entry key="app/src/main/res/layout/activity_splash_screen.xml" value="0.1" />
+        <entry key="app/src/main/res/layout/activity_weather.xml" value="0.1" />
       </map>
     </option>
   </component>

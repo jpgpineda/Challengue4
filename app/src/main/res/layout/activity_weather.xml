@@ -86,7 +86,7 @@
                         android:layout_marginTop="64dp"
                         app:lottie_loop="true"
                         app:layout_constraintEnd_toEndOf="parent"
-                        app:lottie_url="https://assets9.lottiefiles.com/private_files/lf30_em0dkba6.json"
+                        app:lottie_url="https://assets3.lottiefiles.com/private_files/lf30_iugenddu.json"
                         app:layout_constraintHorizontal_bias="0.497"
                         app:layout_constraintStart_toStartOf="parent"
                         app:layout_constraintTop_toBottomOf="@+id/location_button" />

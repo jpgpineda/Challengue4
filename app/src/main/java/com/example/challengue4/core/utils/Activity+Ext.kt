@@ -5,6 +5,10 @@ import android.content.Context
 import android.net.ConnectivityManager
 import android.net.NetworkCapabilities
 import android.os.Build
+import android.view.Gravity
+import android.widget.FrameLayout
+import androidx.appcompat.app.AppCompatActivity
+import com.google.android.material.snackbar.Snackbar
 
 fun Activity.checkForinternet(): Boolean {
     val connectivitymanager = this.getSystemService(Context.CONNECTIVITY_SERVICE) as ConnectivityManager
@@ -27,4 +31,16 @@ fun Activity.checkForinternet(): Boolean {
         @Suppress("DEPRECATION") val networkInfo = connectivitymanager.activeNetworkInfo ?: return false
         @Suppress("DEPRECATION") return networkInfo.isConnected
     }
+}
+
+fun AppCompatActivity.showMessage(
+    activity: Activity,
+    mensaje: String
+){
+    val snackBar = Snackbar.make(activity.findViewById(android.R.id.content),mensaje, Snackbar.LENGTH_LONG)
+    val view = snackBar.view
+    val params = snackBar.view.layoutParams as FrameLayout.LayoutParams
+    params.gravity = Gravity.TOP
+    view.layoutParams = params
+    snackBar.show()
 }
